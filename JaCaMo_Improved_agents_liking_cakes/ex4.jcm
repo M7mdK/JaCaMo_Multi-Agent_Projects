@@ -1,0 +1,27 @@
+mas ex4 {
+	
+	//We have previously tested most of the cases in ex3.
+	//So here we will consider 2 different agents who will bake a cake
+	//The only difference is:
+	//1- sam already have a recipe.
+	//2- alice doesn't have a recipe, so she will search on google.
+	
+	    agent sam: sample_agent.asl{
+    	
+    	beliefs: likes(chocolateCake)
+    			 have([flour,milk,butter,eggs,sugar,bakingPowder,stove])	
+    			 cakeAd(chocolateCake)
+    			 followRecipe([step1,step2,step3])
+    }
+    
+       agent alice: sample_agent.asl{
+    	beliefs: likes(chocolateCake)
+    			 have([flour,milk,butter,eggs,sugar,bakingPowder,stove])	
+    			 cakeAd(chocolateCake)
+    			 searchGoogle([stepA,stepB,stepC])
+    }
+    
+
+    
+}
+

@@ -1,0 +1,18 @@
+mas ex2 {
+
+    agent sample1{
+    	//Hello World in any new language can be added to the belief base of the agent here:
+    	beliefs:language(english, "Hello World")
+				language(spanish , "Hola Mundo")
+				language(french , "Bonjour Le Monde")
+    }
+    
+    agent sample2_1{
+    	//Hello World in any new language can be added to the belief base of the agent here:
+    	beliefs:language(english, "Hello" , "World")
+				language(spanish , "Hola" , "Mundo")
+				language(french , "Bonjour" , "Le Monde")
+    }
+    
+    agent sample2_2 //This agent gets his beliefs from the messages sent from sample2_1 
+}
