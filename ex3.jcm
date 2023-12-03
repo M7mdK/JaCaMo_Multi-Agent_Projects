@@ -1,0 +1,41 @@
+mas ex3 {
+
+    //Let's consider several test cases of agents with different behaviors according to their beliefs.
+    //Different beliefs considered are:
+    //1- What type of cake the agent likes.
+    //2- If the agent have flour, money or non.
+    //3- What type of cake appeared in the advertisement.
+    
+    agent alice: sample_agent.asl{
+    	
+    	beliefs: likes(chocolateCake)
+    			 have(flour)	
+    			 cakeAd(chocolateCake)
+    	//Alice likes this type of cake and she has flour, then she will bake a cake
+    }
+    
+    agent bob: sample_agent.asl{
+    	beliefs: likes(vanileCake)
+    			 have(money)
+    			 cakeAd(vanileCake)
+    	//Bob likes this type of cake and he has money, then he will buy a cake.
+    }
+
+    agent tom: sample_agent.asl{
+    	beliefs: likes(chocolateCake)
+    			 have(flour) 
+    			 have(money)
+    			 cakeAd(strawberryCake)
+    	//Tom doesn't like strawberryCake then he will ignore the ad. He is not going to get a cake.
+    }
+    
+    agent lucy: sample_agent.asl{
+    	beliefs: likes(chocolateCake) 
+    			 cakeAd(chocolateCake)
+    	
+    	//Lucy likes this type of cake but she neither have flour nor money. Then she will not get a cake. 
+    	
+    }
+
+}
+
